@@ -1,0 +1,59 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "gdal-shapefile FR571370.000",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/package/bin/gdal-client",
+            "args": [
+                "--verbose=2",
+                "--force",
+                "--inpath=Charts/BZH_ENC/FR571370.000",
+                "--outpath=Charts/out.mbtiles"
+            ],
+            "stopAtEntry": true,
+            "cwd": "${workspaceFolder}/..",
+            "environment": [{"name":"LD_LIBRARY_PATH","value":"/usr/local/lib64:/usr/local/lib"}],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true,
+                }
+            ],
+            "miDebuggerPath": "/usr/bin/gdb"
+        },
+        {
+            "name": "gdal->mapbox FR571370.000",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/package/bin/gdal-client",
+            "args": [
+                "--verbose=2",
+                "--force",
+                "--inpath=Charts/BZH_ENC/FR571370.000",
+                "--outpath=Charts/out.mbtiles",
+                "--outfmt=MVT",
+            ],
+            "stopAtEntry": true,
+            "cwd": "${workspaceFolder}/..",
+            "environment": [{"name":"LD_LIBRARY_PATH","value":"/usr/local/lib64:/usr/local/lib"}],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "miDebuggerPath": "/usr/bin/gdb"
+        }
+    ]
+}
